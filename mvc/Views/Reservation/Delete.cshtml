@@ -1,0 +1,80 @@
+﻿@model mvc.Models.Reservation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.check_in_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.check_in_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.check_out_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.check_out_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_count)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_count)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reserve_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reserve_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cancel_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cancel_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

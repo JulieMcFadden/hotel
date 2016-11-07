@@ -15,15 +15,25 @@ namespace mvc.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Documentation";
-
+            ViewBag.Message = "Tech specs and docs generated during challenge";
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Full Stack .NET Developer";
+            return View();
+        }
 
+        public ActionResult Admin()
+        {
+            ViewBag.Message = "Data must be administrated as well as coded";
+            return View();
+        }
+
+        public ActionResult Reservation()
+        {
+            ViewBag.Message = "Reserve a room or rooms now";
             return View();
         }
     }
