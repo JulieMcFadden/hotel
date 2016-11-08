@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace mvc.Models
 {
-    public enum room_status { Available, Reserved, Occupied}
     public class User
     {
         public int id { get; set; }
@@ -21,46 +21,30 @@ namespace mvc.Models
         public string country { get; set; }
         public string zip_code { get; set; }
     }
-    public class Hotel
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string geonameid { get; set; }
-
-        public IEnumerable<Room> Rooms { get; set; }
-    }
     public class Room
     {
         public int id { get; set; }
-        public string description { get; set; }
-        public int occupancy_max { get; set; }
+        [Display(Name = "Guests")]
         public int occupants { get; set; }
-        public room_status status { get; set; }
-        public int hotel_id { get; set; }
-        public Hotel Hotel { get; set; }
-
-        public IEnumerable<Ammenity> Ammenities { get; set; }
-    }
-    public class Ammenity
-    {
-        public int id { get; set; }
-        public string description { get; set; }
-        public float value { get; set; }
     }
     public class Reservation
     {
         public int id { get; set; }
+        [Display(Name="Check In")]
+        [DataType(DataType.Date)]
         public DateTime check_in_date { get; set; }
+        [Display(Name = "Check Out")]
+        [DataType(DataType.Date)]
         public DateTime check_out_date { get; set; }
+        [Display(Name = "# Rooms")]
         public int room_count { get; set; }
         public DateTime reserve_date { get; set; }
         public DateTime cancel_date { get; set; }
+        [Display(Name = "Notes")]
         public string notes { get; set; }
 
-        public int user_id { get; set; }
-        public User Customer { get; set; }
-
+        [Display(Name = "Location")]
+        public string geonameid { get; set; }
         public IEnumerable<Room> Rooms { get; set; }
 
     }

@@ -1,0 +1,16 @@
+Developer's Log
+	Day One - 11/7/2016	(~ 2 hours)
+		Did not get as much done as I had hoped today - too many distractions with phone calls and meetings and such.  
+		Decided on a Code First DB using EF for the project for packaging mostly.  
+			Had to consult the old EF Code First tutorial (https://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application) to remember how.  
+		Sketched out some ideas on enhancements if time permits.
+		Built the framework (had to reinstall VS2015 web libraries - last update lost the MVC template!  jeez!!) and generic scaffolding.  
+		Added DbContext & Models, basic CRUD through EF - refamiliarizing myself with EF & Data Annotations
+	
+	Day Two - 11/8/2016	(~ 1 hour in AM)
+		Hooked in (partially) the datepickers - decided to go with jQuery-ui library to keep it fairly generic
+		Added moment.js package for date formatting ease on client side
+		Cleaned up model and views
+		-- next up: finish the datepicker validation
+				    hook in location/geonameid to the teleport API for auto-complete & validation
+		
